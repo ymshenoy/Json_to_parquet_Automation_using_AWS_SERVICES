@@ -122,10 +122,12 @@ git clone <your-repo-url>
 cd json-to-parquet_Automation_using_AWS_Services
 ```
 
-2. Deploy Lambda functions using AWS CLI / SAM.
-3. Configure Glue for Data Catalog/Crawlers.
+2. Deploy Lambda functions using AWS Lambda.
+   Assign an IAM  Role to connect S3 with Lambda -- my_etl_pipeline-role-fh395r1u (has access to S3, Glue, CloudWatch for monioring)
+3. Configure Glue for Data Catalog/Crawlers. 
+   Assign an IAM  Role to connect S3 with Glue -- AWSGlueServiceRole-glue (has access to S3, Glue, CloudWatch for monioring)
 4. Upload sample JSON files to S3.
-5. Use Athena to query processed Parquet data.
+5. Use Athena to query processed Parquet data.ö
 
 ---
 
